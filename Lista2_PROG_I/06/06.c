@@ -33,7 +33,7 @@ int main(){
     char palavra [1000];
 
     printf("Digite a palavra: ");
-    scanf("%s", &palavra);
+    scanf("%[^\n]s", &palavra);
 
     strinv(palavra);
 

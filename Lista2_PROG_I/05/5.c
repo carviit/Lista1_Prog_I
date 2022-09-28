@@ -1,38 +1,63 @@
 #include <stdio.h>
+#include <locale.h>
 
-int main(){
+void ler_notas(float n1[],float n2[], int n){
 
-    float n1 [10], n2 [10], media [10];
-    int i, aluno = 1;
+    int aluno = 1, i;
 
-    for(i=0;i<=9;i++){
+    for(i=0;i<10;i++){
 
-        printf("Digite a NOTA 1 do ALUNO %d: ", aluno);
+        printf("Digite a [NOTA 1] do ALUNO %d: ", aluno);
         scanf("%f", &n1[i]);
 
-        printf("Digite a NOTA 2 do ALUNO %d: ", aluno);
+        printf("\nDigite a [NOTA 2] do ALUNO %d: ", aluno);
         scanf("%f", &n2[i]);
 
+        printf("=================================\n");
+
         aluno++;
-
-        printf("\n");
-
-        media[i] = ( n1[i] + n2[i] ) / 2;
     }
+}
 
-    aluno = 1;
+void calcular_media(float n1[], float n2[], float media [], int n){
 
-    for(i=0;i<=9;i++){
+    int i;
 
-        printf("Aluno %d: ", aluno);
-        printf("\n nota 1: %.2f", n1[i]);
+    for(i=0;i<10;i++){
+
+        media[i] = (n1[i] + n2[i]) / 2;
+
+    }
+}
+
+void imprimir_notas(float n1[], float n2[], float media [], int n){
+
+    int i, aluno = 1;
+
+    for(i=0;i<10;i++){
+
+        printf("Aluno %d:", aluno);
+        printf(" nota 1: %.2f", n1[i]);
         printf("\n nota 2: %.2f", n2[i]);
         printf("\n media: %.2f", media[i]);
 
-        printf("\n\n");
+     aluno++;
 
-        aluno++;
+     printf("\n\n");
+
     }
+}
+
+int main(){
+
+    int n = 10;
+    float n1[n], n2[n], media[n];
+
+    ler_notas(n1, n2, n);
+
+    calcular_media(n1, n2, media, n);
+
+    imprimir_notas(n1, n2, media, n);
 
     return 0;
 }

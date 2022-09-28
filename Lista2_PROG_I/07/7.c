@@ -52,7 +52,6 @@ int main(){
         }
     }
 
-
     printf("\nResultado da Matriz após a multiplicação de todos os elementos por %d\n\n", num);
     printf("========================\n");
     for(i=0;i<3;i++){
