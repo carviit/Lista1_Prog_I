@@ -15,7 +15,7 @@ int acharnum(int x[], int n, int y){
 
     int indice;
 
-    if(x[n] == y && n>=0){
+    if(x[n] == y){
 
         indice = n;
 
