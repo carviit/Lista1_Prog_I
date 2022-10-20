@@ -77,10 +77,10 @@ int main(){
 
      for(i=0;i<5;i++){
 
-        printf("%d ", matriz[i][aux2]);
+        printf("%d\n", matriz[i][aux2]);
      }
 
-    printf("\n===================================");
+    printf("===================================");
 
     printf("\n");
 
